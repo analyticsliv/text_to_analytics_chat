@@ -1,0 +1,15 @@
+langchain==0.2.14
+langchain-core==0.2.38
+langchain-community==0.2.12
+langchain-google-vertexai==1.0.10
+streamlit
+SQLAlchemy==2.0.32
+sqlalchemy-bigquery==1.11.0
+google-cloud-aiplatform
+google-cloud-logging
+google-cloud-storage
+google-cloud-bigquery==3.25.0
+python-dotenv
+google-auth
+matplotlib
+pandas
