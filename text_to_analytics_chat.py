@@ -302,8 +302,8 @@ table = bq_client.get_table("dx-api-project.text_to_analytics_chat.testing")
 users_table = bq_client.get_table("dx-api-project.text_to_analytics_chat.Users")
 
 #data_ana_key = 'AIzaSyBNJ5yDbSIPLTKlB-fcSPDrL95hM94sppE'
-chat_llm = ChatVertexAI(model = "gemini-1.5-pro-latest", google_api_key = data_ana_key, temperature = 0.1)
-llm = VertexAI(model = "gemini-1.5-pro-latest", google_api_key = data_ana_key, temperature = 0.1)
+chat_llm = ChatVertexAI(model = "gemini-1.5-pro-latest", temperature = 0.1)
+llm = VertexAI(model = "gemini-1.5-pro-latest", temperature = 0.1)
 
 
 username = st.text_input("Name: ", key = 'name')
