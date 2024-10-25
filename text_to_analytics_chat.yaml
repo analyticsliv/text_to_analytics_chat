@@ -1,0 +1,3 @@
+runtime: custom
+env: flex
+service_account: text-to-analytics@dx-api-project.iam.gserviceaccount.com
