@@ -186,7 +186,7 @@ def text_to_analytics(input, thread_id, table, chat_llm, llm, db, bq_client):
     plt.xlabel('Date')
     plt.ylabel('Engagements')
     plt.legend()
-    plt.show()
+    st.pyplot(a)
     
     ----
     
@@ -195,7 +195,7 @@ def text_to_analytics(input, thread_id, table, chat_llm, llm, db, bq_client):
     plt.xlabel('Date')
     plt.ylabel('Engagements')
     plt.legend()
-    plt.show()'''}
+    st.pyplot(b)'''}
     ]
     
     example_prompt = PromptTemplate.from_template("Dataset Description: {Dataset Description}\nVisualizations List: {Visualizations List}\nAPI Calls: {API Calls}")
