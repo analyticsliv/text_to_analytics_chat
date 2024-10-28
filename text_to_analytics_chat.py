@@ -210,26 +210,26 @@ def text_to_analytics(input, thread_id, table, chat_llm, llm, db, bq_client):
     # function_caller_prompt = PromptTemplate.from_template(function_caller_prompt.format(input1 = description, input2 = visualizations))
     # function_caller = function_caller_prompt | llm
 
-    try:
+    #try:
         
-        response = get_sql(input, thread_id, db)
+    response = get_sql(input, thread_id, db)
 
-    except:
+    # except:
 
-        st.write('SQL Generation Error.')
+    #     st.write('SQL Generation Error.')
     
-        # rows = [{'Input' : f'{input}', 'SQL' : 'SQL Generation Error.', 'Data_Description' : '', 'Visualizations' : '', 'API_Calls' : json.dumps({'0' : ''}), 'Remark' : ''}]
-        # bq_client.insert_rows_json(table, rows)
+    #     # rows = [{'Input' : f'{input}', 'SQL' : 'SQL Generation Error.', 'Data_Description' : '', 'Visualizations' : '', 'API_Calls' : json.dumps({'0' : ''}), 'Remark' : ''}]
+    #     # bq_client.insert_rows_json(table, rows)
     
-        st.stop()
+    #     st.stop()
 
-    else:
+    # else:
     
-        response = response.split()
-        response = ' '.join(response)
-        sql, column_names = response.split('Column Names')
-        sql = sql.replace('SQL Query:', '').replace('SQL query:', '')
-        column_names = column_names.replace(': ', '').replace(' ', '').split(',')
+    #     response = response.split()
+    #     response = ' '.join(response)
+    #     sql, column_names = response.split('Column Names')
+    #     sql = sql.replace('SQL Query:', '').replace('SQL query:', '')
+    #     column_names = column_names.replace(': ', '').replace(' ', '').split(',')
 
     try:
     
