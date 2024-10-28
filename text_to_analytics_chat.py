@@ -7,6 +7,7 @@ import getpass
 import os
 from langchain_community.utilities import SQLDatabase
 from langchain_google_vertexai import ChatVertexAI
+from langchain_google_vertexai import VertexAI
 #from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
 from langchain_core.prompts import PromptTemplate
