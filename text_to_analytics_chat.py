@@ -11,6 +11,7 @@ from langchain_google_vertexai import VertexAI
 #from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
 from langchain_core.prompts import PromptTemplate
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.prompts import FewShotPromptTemplate, PromptTemplate, MessagesPlaceholder
 import streamlit as st
 import matplotlib.pyplot as plt
