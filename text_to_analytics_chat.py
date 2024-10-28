@@ -265,20 +265,16 @@ def text_to_analytics(input, thread_id, table, chat_llm, llm, db, bq_client):
 
     st.dataframe(data)
 
-    #try:
-    st.write('Here')
+    try:
 
-    #import matplotlib.pyplot as plt
+        for call in calls:
+    
+            exec(call)
+            st.write(call)
 
-    for call in calls:
+    except:
 
-        st.write('Got here')
-
-        exec(call)
-
-    # except:
-
-    #     st.write('API Call Execution Error')
+        st.write('API Call Execution Error')
 
         # rows = [{'Input' : f'{input}', 'SQL' : f'{sql}', 'Data_Description' : f'{description}', 'Visualizations' : f'{visualizations}', 'API_Calls' : f'{calls_json}', 'Remark' : ''}]
         # bq_client.insert_rows_json(table, rows)
