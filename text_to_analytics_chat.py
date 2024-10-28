@@ -318,11 +318,13 @@ get_name = st.button('Submit your name', key = 'username', on_click = click_butt
 if st.session_state.clicked:
 
     query = f'SELECT * FROM `dx-api-project.text_to_analytics_chat.Users` WHERE Name = "{username}"'
-    query_job = bq_client.query(query).to_dataframe()
+    query_job = bq_client.query(query)
+    users_data = [(row.Name, row.Thread_ID) for row in query_job.result()]
+    
 
-    if username in list(query_job.iloc[: , 0]):
+    if len(users_data) != 0: #username in list(query_job.iloc[: , 0]):
 
-        thread_id = query_job.iat[-1, 1]
+        thread_id = users_data[-1][1] #query_job.iat[-1, 1
         st.write(f'Nice to see you again, {username}!')
 
     else:
