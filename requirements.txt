@@ -2,6 +2,8 @@ langchain==0.2.14
 langchain-core==0.2.38
 langchain-community==0.2.12
 langchain-google-vertexai==1.0.10
+langgraph==0.2.14
+langgraph-checkpoint==1.0.6
 streamlit
 SQLAlchemy==2.0.32
 sqlalchemy-bigquery==1.11.0
