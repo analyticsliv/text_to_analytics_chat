@@ -9,7 +9,6 @@ google-cloud-aiplatform
 google-cloud-logging
 google-cloud-storage
 google-cloud-bigquery==3.25.0
-db-types
 python-dotenv
 google-auth
 matplotlib
