@@ -8,7 +8,8 @@ sqlalchemy-bigquery==1.11.0
 google-cloud-aiplatform
 google-cloud-logging
 google-cloud-storage
-google-cloud-bigquery==3.25.0
+google-cloud-bigquery[pandas]==2.34.3
+#google-cloud-bigquery==3.25.0
 python-dotenv
 google-auth
 matplotlib
